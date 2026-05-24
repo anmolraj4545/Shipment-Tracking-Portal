@@ -1,4 +1,4 @@
-package com.shipment_tracking.entity.enums;
+package com.shipment_tracking.enums;
 
 public enum UserRole
 {

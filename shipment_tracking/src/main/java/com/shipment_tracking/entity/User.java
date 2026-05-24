@@ -1,6 +1,6 @@
 package com.shipment_tracking.entity;
 
-import com.shipment_tracking.entity.enums.UserRole;
+import com.shipment_tracking.enums.UserRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
