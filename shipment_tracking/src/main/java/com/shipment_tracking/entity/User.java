@@ -1,15 +1,20 @@
 package com.shipment_tracking.entity;
 
-import com.shipment_tracking.enums.UserRole;
+
+import com.shipment_tracking.entity.enums.UserRoles;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
+@Builder
+@Table(name = "users")
 public class User
 {
     @Id
@@ -31,8 +36,13 @@ public class User
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private UserRole role;
+    private UserRoles role;
+
+//    @Column(nullable = false, updatable = false)
+//    private Instant createdAt;
 
     @Column(nullable = false, updatable = false)
-    private Instant createdAt;
+    private LocalDateTime createdAt;
+
+
 }
